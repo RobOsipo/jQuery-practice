@@ -21,7 +21,39 @@ $('h1').removeClass('big-title')
 // to add multiple classes keep them all inside the same qoutes but seperated by a space
 $('h1').addClass('big-title padding-30')
 // To check if an element has a certain class
-$('h1').hasClass('big-title') // returns true if the element has a matching class, flase if nothing
+$('h1').hasClass('big-title') // returns true if the element has a matching class, false if nothing
+
+
+
+
+
+// Manipulating text portion 
+
+
+$('h1').text('A little jQuery Practice (:') // Change text content of my h1
+
+$('button').text('Im a button') // Can change text on ALL selected elements
+
+$('div').html('<li><ul>I put these</ul><ul>list items in</ul><ul>With jQuery</ul></li>') // innerHTML method 
+
+
+
+
+
+
+//Manipulating attributes Portion
+
+$('img').attr('src') // this just get you a particular attribute attached to the img 
+// To actually change an attribute....
+$('a').attr('href','https://www.yahoo.com') // originally Google, switched to yahoo
+
+// a CSS class is also an attribute, so when an item has a class you can change it
+$('h2').attr('class','classTwo')
+
+
+
+
+
 
 
 
