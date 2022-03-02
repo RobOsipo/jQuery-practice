@@ -52,6 +52,93 @@ $('h2').attr('class','classTwo')
 
 
 
+// adding event listeners portion 
+
+// click event, then I change the css to add a border, than I take it away after 2 seconds
+$('h3').click(() => {
+    $('h3').css('border', '5px solid black')
+
+    setTimeout(() => {
+        $('h3').css('border', 'none')
+    }, 2000)
+})
+
+// click event put on all buttons, in vanilla I would need to querySelectorAll then loop over the buttons to add event to each
+$('button').click(() => {
+    alert('Thanks for clicking, now go home')
+})
+
+
+// keydown event 
+
+$('input').keydown((e) => { // logs whatever key event is typed in our input
+    console.log(e.key)
+})
+
+
+$(document).keydown((e) => {
+    $('h4').css('font-size','5em') // keydown event on the document
+    $('h4').text(e.key)
+})
+
+
+// simpler way to do ALL event listeners in jQuery 
+$('p').on('click', (e) => {
+    alert('ya clicked the paragraph')
+})
+
+
+
+
+
+
+
+// Add and remove new elements portions 
+
+$('p').before('<button>button before</button>') // adds html before an element, .after will add it after the element
+
+// .prepend & .append will add the code inside your selected element at the beggining or end depending on which you used
+
+// if you use .remove it gets rid of all selected elements
+
+
+
+
+
+// Jquery animations 
+
+
+$('h5').on('click', () => { // you can also add .toggle  to something like button to switch the H5 on and off
+    $('h5').hide()
+    setTimeout(() => {
+        $('h5').show()
+    },2000)
+})
+
+
+$('h6').css('font-size','30px')// just to make h6 bigger 
+
+// fadeOut fadeIn fadeToggle
+$('h6').on('click', () => {
+    $('h6').fadeOut()
+})
+
+// aslo has slideUP, slideDown, and slideToggle
+
+
+$('#btn').on('click', () => {
+    $('h1').animate({margin: '20px'})
+})
+
+// can chain them together
+.slideUp().slideDown().animate({padding: '20px'})
+
+
+
+
+
+
+
 
 
 
